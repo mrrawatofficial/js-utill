@@ -38,6 +38,6 @@ bg: "#333" || string || background color, default #333,
 bgOpacity: 0.5 || int 0 to 1 || background opacity, default 0.5,
 size: 100 || int || size of the loader, default 100px,
 }
-const loader = websiteLoader(options);
+const loader = mbrLoader(options);
 loader.init();
 loader.destroy();
