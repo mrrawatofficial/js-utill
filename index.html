@@ -11,27 +11,33 @@
 				margin: 0;
 				box-sizing: border-box;
 			}
+			body {
+				background-image: url("https://images.unsplash.com/photo-1644982649363-fae51da44eac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				min-height: 100vh;
+			}
 		</style>
 	</head>
 	<body>
 		<input type="text" data-input="copy" />
 		<button id="testClick" data-button="copy">Copy To Clipboard</button>
 		<!-- <script src="src/dist/js/index.js" type="text/javascript"></script> -->
-		<script src="src/dist/js/index.js" type="text/javascript"></script>
+		<script src="node_modules/mbr-js/js/mbr.js" type="text/javascript"></script>
 
 		<script>
 			window.onload = function () {
 				const loader = mbrLoader({
 					image:
 						"https://cdn.dribbble.com/users/255512/screenshots/2215917/animation.gif",
-					bg: "#333",
-					bgOpacity: 0.5,
-					size: 300,
+					bg: "rgba(0,0,0,.5)",
+					size: 100,
 				});
 				loader.init();
 				setTimeout(function () {
 					loader.destroy();
-				}, 3000);
+				}, 2000);
 			};
 		</script>
 
@@ -41,7 +47,6 @@
 			const button = document.querySelector('[data-button="copy"]');
 			button.addEventListener("click", () => {
 				copyToClipboard(input.value);
-				console.log(navigator);
 			});
 		</script>
 		<script>

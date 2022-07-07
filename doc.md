@@ -34,7 +34,7 @@ copyToClipboard("text"); || string || will copy the text to the clipboard
 
 const options = {
 image: gifURL || string || url of the gif to load, default spinner,
-bg: "#333" || string || background color, default #333,
+bg: "rgba(0,0,0,.5)" || string || background color only in rgba, default rgba(0,0,0,.5),
 bgOpacity: 0.5 || int 0 to 1 || background opacity, default 0.5,
 size: 100 || int || size of the loader, default 100px,
 }

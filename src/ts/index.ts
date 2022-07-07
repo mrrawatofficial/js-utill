@@ -6,7 +6,6 @@ type setCookieType = {
 type loaderType = {
 	image?: string;
 	bg?: string;
-	bgOpacity?: number;
 	size?: number;
 };
 
@@ -52,9 +51,6 @@ const mbrClipboard = () => {
 	const copyToClipboard = (text: string) => {
 		navigator.clipboard.writeText(text);
 	};
-	const cutToClipboard = (text: string) => {
-		navigator.clipboard.writeText(text);
-	};
 	return {
 		copyToClipboard,
 	};
@@ -62,10 +58,10 @@ const mbrClipboard = () => {
 
 // website loader for loading a website
 const mbrLoader = (data: loaderType) => {
-	const { image, bg = "#333", bgOpacity = 0.5, size = 100 } = data;
+	const { image, bg = "rgba(0,0,0,.5)", size = 100 } = data;
 	const wesite_inner_loader = `<div style="width:${size}px; height:${size}px; background:${bg}; border:5px solid transparent; border-top:5px solid white; border-bottom:5px solid white; border-radius:50%;  animation:spinn 1s linear infinite;"></div>`;
 	const loader_img = `<img src="${image}" style="width:${size}px; height:${size}px;">`;
-	const website_loader = `<div id="mbr_loader" style="background:${bg}; display:flex; width:100%; min-height:100vh; justify-content:center; align-items:center; opacity:${bgOpacity}">${
+	const website_loader = `<div id="mbr_loader" style="background:${bg}; display:flex; width:100%; min-height:100vh; justify-content:center; align-items:center; z-index:9999; position:fixed; top:0;">${
 		image ? loader_img : wesite_inner_loader
 	}</div>`;
 	const init = function () {
