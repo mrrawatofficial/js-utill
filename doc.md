@@ -1,6 +1,6 @@
 ## set cookie
 
-const { setCookie, getCookie, deleteCookie } = mbrCookies();
+**const { setCookie, getCookie, deleteCookie } = mbrCookies();**
 
 pass object
 setCookies({
@@ -11,24 +11,15 @@ setCookies({
 
 ## get cookie
 
-getCookie("kub"); || name of the cookie || string || will return the value of the cookie if it exists or null if it doesn't
+**getCookie("kub");** || name of the cookie || string || will return the value of the cookie if it exists or null if it doesn't
 
-## get cookie
+## delete cookie
 
-deleteCookie("kub"); || name of the cookie || string || will delete the cookie if it exists
+**deleteCookie("kub");** || name of the cookie || string || will delete the cookie if it exists
 
 ## copyToClipboard
 
-<script>
-    const { copyToClipboard } = mbrClipboard();
-    const input = document.querySelector('[data-input="copy"]');
-    const button = document.querySelector('[data-button="copy"]');
-    button.addEventListener("click", () => {
-        copyToClipboard(input.value);
-    });
-</script>
-
-copyToClipboard("text"); || string || will copy the text to the clipboard
+**copyToClipboard("text");** || string || will copy the text to the clipboard
 
 ## websiteLoader
 
@@ -38,6 +29,11 @@ bg: "rgba(0,0,0,.5)" || string || background color only in rgba, default rgba(0,
 bgOpacity: 0.5 || int 0 to 1 || background opacity, default 0.5,
 size: 100 || int || size of the loader, default 100px,
 }
-const loader = mbrLoader(options);
-loader.init();
-loader.destroy();
+
+**const loader = mbrLoader(options);**
+**loader.init();**
+**loader.destroy();**
+
+## unique id
+
+**mbrUniqueId();** || will return a unique id string of length 19 including the ('-')

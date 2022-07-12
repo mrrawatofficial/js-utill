@@ -100,3 +100,15 @@ const mbrLoader = (data: loaderType) => {
 		destroy,
 	};
 };
+
+// generate unique id
+const mbrUniqueId = () => {
+	let result = "";
+	for (let i = 1; result.length < 19; i++) {
+		result += Math.floor(Math.random() * 16).toString(36);
+		if (i % 4 === 0 && i !== 16) {
+			result += "-";
+		}
+	}
+	return result;
+};

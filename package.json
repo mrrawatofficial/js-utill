@@ -18,6 +18,6 @@
 	},
 	"homepage": "https://github.com/mrrawatofficial/js-utill#readme",
 	"dependencies": {
-		"mbr-js": "^0.1.1"
+		"mbr-js": "^0.2.2"
 	}
 }

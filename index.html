@@ -12,7 +12,7 @@
 				box-sizing: border-box;
 			}
 			body {
-				background-image: url("https://images.unsplash.com/photo-1644982649363-fae51da44eac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+				background-image: url("https://images.unsplash.com/photo-1657534531210-e4b1388efe95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
 				background-size: cover;
 				background-position: center center;
 				background-repeat: no-repeat;
@@ -21,12 +21,23 @@
 		</style>
 	</head>
 	<body>
-		<input type="text" data-input="copy" />
-		<button id="testClick" data-button="copy">Copy To Clipboard</button>
+		<!-- <input type="number" id="generateRandomNumber" class="form-control" /> -->
+		<button class="btn btn-info" id="generateRandomNumberbtn">Generate</button>
+		<h2 id="randomNumber">asdfasdf</h2>
+		<!-- <input type="text" data-input="copy" />
+		<button id="testClick" data-button="copy">Copy To Clipboard</button> -->
 		<!-- <script src="src/dist/js/index.js" type="text/javascript"></script> -->
 		<script src="node_modules/mbr-js/js/mbr.js" type="text/javascript"></script>
 
 		<script>
+			document
+				.getElementById("generateRandomNumberbtn")
+				.addEventListener("click", function () {
+					var randomNumber = mbrUniqueId();
+					document.getElementById("randomNumber").innerHTML = randomNumber;
+				});
+		</script>
+		<!-- <script>
 			window.onload = function () {
 				const loader = mbrLoader({
 					image:
@@ -63,6 +74,6 @@
 						value: user,
 					});
 				});
-		</script>
+		</script> -->
 	</body>
 </html>
