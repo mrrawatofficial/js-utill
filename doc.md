@@ -37,3 +37,20 @@ size: 100 || int || size of the loader, default 100px,
 ## unique id
 
 **mbrUniqueId();** || will return a unique id string of length 19 including the ('-')
+
+## input field validation
+
+**const { onlyNumbers, onlyLetters } = mbrValidation();**
+
+right now it only works with onkeypress
+
+< input type="text" onkeypress="return onlyNumbers(event);" />
+
+< input type="text" onkeypress="return onlyLetters(event);" />
+
+## image optimizer
+
+call the function on load **mbrImageOptimizer()**
+
+This function is to reduce the load time of the images in the website.
+add **mbrImage** class to the image and **src="low-quality image"** and **data-src="high-quality image"**

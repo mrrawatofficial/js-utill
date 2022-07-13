@@ -93,4 +93,39 @@ const mbrUniqueId = () => {
     }
     return result;
 };
+// validation
+const mbrValidation = () => {
+    const onlyNumbers = (event) => {
+        var iKeyCode = event.which ? event.which : event.keyCode;
+        if (iKeyCode != 46 && (iKeyCode <= 48 || iKeyCode >= 57))
+            return false;
+        return true;
+    };
+    const onlyLetters = (event) => {
+        var iKeyCode = event.which ? event.which : event.keyCode;
+        if (iKeyCode == 32 ||
+            (iKeyCode <= 48 && iKeyCode >= 57) ||
+            (iKeyCode >= 97 && iKeyCode <= 122))
+            return true;
+        return false;
+    };
+    return {
+        onlyNumbers,
+        onlyLetters,
+    };
+};
+// optimize image
+const mbrImageOptimizer = () => {
+    const images = document.querySelectorAll(".mbrImage");
+    Array.from(images).map((item) => {
+        const img = new Image();
+        img.src = item.dataset.src;
+        img.onload = () => {
+            item.classList.remove("mbrImage");
+            return item.nodeName === "IMG"
+                ? (item.src = item.dataset.src)
+                : (item.style.backgroundImage = `url(${item.dataset.src})`);
+        };
+    });
+};
 //# sourceMappingURL=index.js.map
