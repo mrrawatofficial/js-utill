@@ -7,6 +7,8 @@ type loaderType = {
 	image?: string;
 	bg?: string;
 	size?: number;
+	text?: string;
+	textColor?: string;
 };
 
 // for cookies
@@ -58,12 +60,19 @@ const mbrClipboard = () => {
 
 // website loader for loading a website
 const mbrLoader = (data: loaderType) => {
-	const { image, bg = "rgba(0,0,0,.5)", size = 100 } = data;
+	const {
+		image,
+		bg = "rgba(0,0,0,.5)",
+		size = 100,
+		text = "Loading...",
+		textColor = "white",
+	} = data;
 	const wesite_inner_loader = `<div style="width:${size}px; height:${size}px; background:${bg}; border:5px solid transparent; border-top:5px solid white; border-bottom:5px solid white; border-radius:50%;  animation:spinn 1s linear infinite;"></div>`;
 	const loader_img = `<img src="${image}" style="width:${size}px; height:${size}px;">`;
-	const website_loader = `<div id="mbr_loader" style="background:${bg}; display:flex; width:100%; min-height:100vh; justify-content:center; align-items:center; z-index:9999; position:fixed; top:0;">${
-		image ? loader_img : wesite_inner_loader
-	}</div>`;
+	const website_loader = `<div id="mbr_loader" style="background:${bg}; display:flex; width:100%; min-height:100vh; justify-content:center; align-items:center; z-index:9999; position:fixed; top:0; flex-direction:column; gap:10px;">
+			${image ? loader_img : wesite_inner_loader}
+			<div style="color:${textColor}; font-size:18px;">${text}</div>
+	</div>`;
 	const init = function () {
 		document.body.insertAdjacentHTML("afterbegin", website_loader);
 		spinn();

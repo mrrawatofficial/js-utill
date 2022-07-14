@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Optimizer</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			body {
+				background-size: cover;
+				background-position: center center;
+				background-repeat: no-repeat;
+				min-height: 100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<img
+			class="mbrImage"
+			src="../../img/sm/1.jpeg"
+			data-src="https://images.unsplash.com/photo-1657652885037-d937b302435a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+			alt="Beautiful landscape sunrise"
+			style="width: 500px; height: 500px; object-fit: cover"
+		/>
+		<img
+			class="mbrImage"
+			src="https://images.unsplash.com/photo-1657652885037-d937b302435a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+			data-src="../../img/sm/1.jpeg"
+			alt="Beautiful landscape sunrise"
+			style="width: 500px; height: 500px; object-fit: cover"
+		/>
+		<script src="../dist/js/index.js" type="text/javascript"></script>
+		<script>
+			setTimeout(function () {
+				mbrImageOptimizer();
+			}, 2000);
+		</script>
+	</body>
+</html>
