@@ -1,3 +1,9 @@
+### cdn
+
+https://cdn.jsdelivr.net/npm/mbr-js@0.4.0/js/mbr.min.js
+
+https://cdn.jsdelivr.net/npm/mbr-js@0.4.0/js/mbr.js
+
 ## set cookie
 
 **const { setCookie, getCookie, deleteCookie } = mbrCookies();**
