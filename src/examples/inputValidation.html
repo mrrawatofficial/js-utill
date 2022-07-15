@@ -18,6 +18,25 @@
 			onkeypress="return onlyLetters(event);"
 			placeholder="onlyAlphabets"
 		/>
+
+		<code>
+			<pre>
+				&lt;input
+				type="text"
+				onkeypress="return onlyNumbers(event);"
+				placeholder="onlyNumber" /&gt;
+
+				&lt;type="text"
+				onkeypress="return onlyLetters(event);"
+				placeholder="onlyAlphabets" /&gt;
+			
+				&lt;script&gt;
+					const { onlyNumbers, onlyLetters } = mbrValidation();
+				&lt;/script&gt;
+			</pre
+			>
+		</code>
+
 		<script src="../dist/js/index.js" type="text/javascript"></script>
 
 		<script>

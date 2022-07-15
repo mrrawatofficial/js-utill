@@ -9,6 +9,28 @@
 	</head>
 	<body>
 		<button class="btn" id="testClick">Set Cookes</button>
+
+		<code>
+			<pre>
+				&lt;script&gt;
+					const { setCookie, getCookie, deleteCookie } = mbrCookies();
+					document
+						.getElementById("testClick")
+						.addEventListener("click", function () {
+							const user = {
+								name: "John",
+								age: 30,
+							};
+							setCookie({
+								name: "test",
+								value: user,
+							});
+						});
+				&lt;/script&gt;
+			</pre
+			>
+		</code>
+
 		<script src="../dist/js/index.js" type="text/javascript"></script>
 		<script>
 			const { setCookie, getCookie, deleteCookie } = mbrCookies();
@@ -23,7 +45,7 @@
 						name: "test",
 						value: user,
 					});
-					alert("cookie set");
+					alert("cookie has been set");
 					console.log(getCookie("test"));
 				});
 		</script>
